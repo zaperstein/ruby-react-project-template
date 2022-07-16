@@ -6,4 +6,12 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+   get '/mushrooms' do
+     Mushroom.all.to_json
+    end
+
+    get '/images' do 
+      Image.all.to_json
+    end
+
 end
